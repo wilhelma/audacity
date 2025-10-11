@@ -281,7 +281,7 @@ int App::run(QCoreApplication& app, CommandLineParser& commandLineParser)
 #ifndef Q_OS_WASM
     QThreadPool* globalThreadPool = QThreadPool::globalInstance();
     if (globalThreadPool) {
-        LOGI() << "activeThreadCount: " << globalThreadPool->activeThreadCount();
+        LOGI() << "active thread count: " << globalThreadPool->activeThreadCount();
         globalThreadPool->waitForDone();
     }
 #endif
