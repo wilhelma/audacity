@@ -15,6 +15,9 @@
 #include "libraries/lib-wave-track/WaveChannelUtilities.h"
 #include "libraries/lib-wave-track/WaveTrack.h"
 #include <cmath>
+#include <array>
+
+std::array<au::effects::NormalizeEffect, 10'000> g_normalizeEffects;
 
 namespace au::effects {
 const EffectParameterMethods& NormalizeEffect::Parameters() const
